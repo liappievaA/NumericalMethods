@@ -13,9 +13,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: change directory
-      run: cd Fourier_1d
-    - name: make
-      run: make
-    - name: make conv
-      run: make conv
+    - name: configure
+      run: ./configure
+    - name: make in subdirectory
+      run: |
+        cd Fourier_1d
+        make
+    - name: make conv in subdirectory
+      run: |
+        cd Fourier_1d
+        make conv
