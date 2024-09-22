@@ -14,7 +14,9 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: configure
-      run: ./configure
+      run: |
+        cd Fourier_1d
+        ./configure
     - name: make in subdirectory
       run: |
         cd Fourier_1d
