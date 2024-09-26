@@ -39,14 +39,14 @@ int main(){
     outFile.open(nameFile);
     //добавим в файл промежуточные точки для оценки погрешности
     double dot1;
-    double dot2;
+//     double dot2;
     if(outFile.is_open()){
         for(i = 0; i < NUMBER_OF_DOTS; i++){ 
             dot1 = MASSIVE_OF_DOTS[i];
-            dot2 = MASSIVE_OF_DOTS[i + 1];
+//             dot2 = MASSIVE_OF_DOTS[i + 1];
             outFile << std::setprecision(15) << dot1 << " " << seriesOfFurierAtPoint(NUMBER_OF_DOTS, MASSIVE_C_nk, dot1) << " " << u(dot1) << std::endl;
-            outFile << std::setprecision(15) << 2*dot1 / 3. + dot2 / 3. << " " << seriesOfFurierAtPoint(NUMBER_OF_DOTS, MASSIVE_C_nk, 2*dot1 / 3. + dot2 / 3.) << " "  << u(2*dot1 / 3. + dot2 / 3.) << std::endl;
-            outFile << std::setprecision(15) << dot1 / 3. + 2*dot2 / 3. << " " << seriesOfFurierAtPoint(NUMBER_OF_DOTS, MASSIVE_C_nk, dot1 / 3. + 2*dot2 / 3.) << " " << u(dot1 / 3. + 2*dot2 / 3.) <<  std::endl;
+//             outFile << std::setprecision(15) << 2*dot1 / 3. + dot2 / 3. << " " << seriesOfFurierAtPoint(NUMBER_OF_DOTS, MASSIVE_C_nk, 2*dot1 / 3. + dot2 / 3.) << " "  << u(2*dot1 / 3. + dot2 / 3.) << std::endl;
+//             outFile << std::setprecision(15) << dot1 / 3. + 2*dot2 / 3. << " " << seriesOfFurierAtPoint(NUMBER_OF_DOTS, MASSIVE_C_nk, dot1 / 3. + 2*dot2 / 3.) << " " << u(dot1 / 3. + 2*dot2 / 3.) <<  std::endl;
         }
     } else {
         std::cout << "ERROR: u can't create out.txt" << std::endl;

@@ -47,7 +47,7 @@ int main(){
         }
         makeKoef_C_nk((NUMBER_OF_DOTS + 1) * i - 1, MASSIVE_OF_U, MASSIVE_C_nk, _trashMassive);
         hForNorm = 1 / ((double)(NUMBER_OF_DOTS * i));
-        MaxForNorm = my_m_eps();
+        MaxForNorm = 1.e-16;
         for (double x = 0; x < 1; x += hForNorm){
             temp = seriesOfFurierAtPoint((NUMBER_OF_DOTS + 1) * i - 1, MASSIVE_C_nk, x) - u(x);
             if (fabs(temp) > MaxForNorm)
@@ -113,7 +113,7 @@ int main(){
         return -6;
     }
     for(i = 1; i < TEST_FOR_CONVERGE; i++){
-        if(fabs(MASSIVE_NUMBER_OF_DOTS[i] - MASSIVE_NUMBER_OF_DOTS[i - 1]) < my_m_eps()){
+        if(fabs(MASSIVE_NUMBER_OF_DOTS[i] - MASSIVE_NUMBER_OF_DOTS[i - 1]) < 1.e-16){
             std::cout << "ERROR: u have zero value at log" << std::endl;
             delete [] MASSIVE_LOG_HEIGHT_ERROR;
             delete [] MASSIVE_NUMBER_OF_DOTS;

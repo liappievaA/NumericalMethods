@@ -4,7 +4,7 @@
 
 double u(double x){
     // return 5*cos(M_PI/2. * (4. + 1.) * x) - 10 * cos(M_PI/2. * (10. + 1.) * x);
-    //  return x*x*x*x - x*x*x;
+    //return x*x*x*x - x*x*x;
     // return cos(M_PI/2. * (2. + 1.) * x);
     return 1. / (double)(1. + 25.*x*x) - 1./26.;
     // return 1 ? x < 0.5 && x > 0.4: 0;
@@ -57,10 +57,10 @@ double seriesOfFurierAtPoint(int N, double *koef, double var){
     }
     return result;
 }
-double my_m_eps(){
-    double eps = 1.0;
-    while ((1.0 + eps) != 1.0) {
-        eps /= 2.0;
-    }
-    return eps;
-}
+// double my_m_eps(){
+//     double eps = 1.0;
+//     while ((1.0 + eps) < 1.0) {
+//         eps /= 2.0;
+//     }
+//     return eps;
+// }
