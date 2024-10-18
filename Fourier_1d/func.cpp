@@ -4,9 +4,9 @@
 
 double u(double x){
     // return 5*cos(M_PI/2. * (4. + 1.) * x) - 10 * cos(M_PI/2. * (10. + 1.) * x);
-    //return x*x*x*x - x*x*x;
+    return x*x*x*x - x*x*x;
     // return cos(M_PI/2. * (2. + 1.) * x);
-    return 1. / (double)(1. + 25.*x*x) - 1./26.;
+    // return 1. / (double)(1. + 25.*x*x) - 1./26.;
     // return 1 ? x < 0.5 && x > 0.4: 0;
 }
 int makePoints(int NUMBER_OF_DOTS, double *MASSIVE_OF_DOTS){
