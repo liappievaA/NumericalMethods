@@ -1,0 +1,10 @@
+double f(double x);
+int makePoints(int NUMBER_OF_DOTS, double RIGHT_SIDE, double LEFT_SIDE, double **MASSIVE_OF_DOTS, int TYPE_OF_DOTS, double *_trashMassive);
+int uniformDots(int NUMBER_OF_DOTS, double RIGHT_SIDE, double LEFT_SIDE, double *_trashMassive);
+int chebyshevDots(int NUMBER_OF_DOTS, double RIGHT_SIDE, double LEFT_SIDE, double *_trashMassive);
+int randomDots(int NUMBER_OF_DOTS, double RIGHT_SIDE, double LEFT_SIDE, double *_trashMassive);
+int findSolutionWithJordanGauss(int n, double* a, double* b, double* x);
+double canonPolinom(int deg, double var, double *coef);
+double lagrange(int deg, double var, double *y, double *x);
+int __checkEqual(double *mas, int n);
+double __pow(double x, int deg);
